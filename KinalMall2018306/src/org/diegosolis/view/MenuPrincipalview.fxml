@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegosolis.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="406.0" fitWidth="736.0" layoutX="-92.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoKinalMall20.jpeg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="-3.0" stylesheets="@../resource/KinalMallCss.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaDepartamentos" text="Departamentos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargos" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorarios" text="Horarios" />
+              <MenuItem mnemonicParsing="false" onAction="#ventanaAdministracion" text="Administracion" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoCliente" text="TipoCliente" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaLocales" text="Locales" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProveedor" text="Proveedor" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="About" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaLogin" text="Cerrar Sesión" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

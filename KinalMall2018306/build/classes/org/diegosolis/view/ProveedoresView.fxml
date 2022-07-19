@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegosolis.controller.ProveedoresController">
+   <children>
+      <AnchorPane prefHeight="460.0" prefWidth="198.0" style="-fx-background-color: #3A8FDD;">
+         <children>
+            <VBox layoutY="209.0" prefHeight="237.0" prefWidth="208.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="54.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Nuevo">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="54.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Eliminar">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/basureropng.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="54.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Editar">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/scissors-png.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="54.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Reporte">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/docspng.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="26.0" layoutY="29.0" prefHeight="157.0" prefWidth="156.0" style="-fx-background-color: #3882C6; -fx-background-radius: 120 120 120 120;">
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="126.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/camion%20png.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="204.0" prefHeight="123.0" prefWidth="852.0" style="-fx-background-color: #3A8FDD;">
+         <children>
+            <Label layoutX="279.0" layoutY="61.0" />
+            <Label layoutX="147.0" layoutY="23.0" prefHeight="89.0" prefWidth="393.0" text="Proveedores" textAlignment="RIGHT">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="80.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="78.0" fitWidth="130.0" layoutX="727.0" layoutY="33.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/casita.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="130.0" layoutX="641.0" layoutY="33.0" onMouseClicked="#ventanaCuentasPorPagar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pagar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="212.0" layoutY="140.0" prefHeight="15.0" prefWidth="118.0" text="CódigoProveedor">
+         <font>
+            <Font name="Franklin Gothic Medium" size="16.0" />
+         </font></Label>
+      <Label layoutX="208.0" layoutY="177.0" text="Teléfono Proveedor">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="16.0" />
+         </font></Label>
+      <Label layoutX="763.0" layoutY="140.0" text="Servicio Prestado">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="17.0" />
+         </font></Label>
+      <Label layoutX="495.0" layoutY="139.0" text="NITProveedor">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="16.0" />
+         </font></Label>
+      <Label layoutX="474.0" layoutY="181.0" text="Dirección Proveedor">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="16.0" />
+         </font></Label>
+      <Label layoutX="772.0" layoutY="181.0" text="Saldo Favor">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="16.0" />
+         </font></Label>
+      <Label layoutX="328.0" layoutY="230.0" text="Saldo Contra">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="16.0" />
+         </font></Label>
+      <Label layoutX="633.0" layoutY="230.0" text="CódigoAdministración">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="16.0" />
+         </font></Label>
+      <TextField fx:id="txtCodProveedor" editable="false" layoutX="336.0" layoutY="135.0" />
+      <TextField fx:id="txtNitProveedor" editable="false" layoutX="594.0" layoutY="135.0" prefHeight="25.0" prefWidth="138.0" />
+      <TextField fx:id="txtServicioPrestado" editable="false" layoutX="876.0" layoutY="135.0" prefHeight="25.0" prefWidth="165.0" />
+      <TextField fx:id="txtTelefonoProveedor" editable="false" layoutX="350.0" layoutY="177.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="txtDireccionProveedor" editable="false" layoutX="604.0" layoutY="177.0" prefHeight="25.0" prefWidth="165.0" />
+      <TextField fx:id="txtSaldoFavor" editable="false" layoutX="848.0" layoutY="177.0" prefHeight="25.0" prefWidth="156.0" />
+      <TextField fx:id="txtSaldoContra" editable="false" layoutX="419.0" layoutY="226.0" />
+      <ComboBox fx:id="cmbCodAdmin" disable="true" layoutX="776.0" layoutY="226.0" prefWidth="150.0" />
+      <TableView fx:id="tblProveedores" layoutX="218.0" layoutY="260.0" onMouseClicked="#selececcionarElemento" prefHeight="200.0" prefWidth="841.0" stylesheets="@../resource/ObjectMall2021.css">
+        <columns>
+          <TableColumn fx:id="colCodProveedor" prefWidth="89.0" text="Cod.Proveedor" />
+          <TableColumn fx:id="colNitProveedor" prefWidth="90.0" text="NITProveedor" />
+            <TableColumn fx:id="colServicioPrestado" prefWidth="105.0" text="ServicioPrestado" />
+            <TableColumn fx:id="colTelefonoProveedor" prefWidth="117.0" text="TeléfonoProveedor" />
+            <TableColumn fx:id="colDireccionProveedor" prefWidth="227.0" text="DirecciónProveedor" />
+            <TableColumn fx:id="colSaldoFavor" prefWidth="67.0" text="SaldoFavor" />
+            <TableColumn fx:id="colSaldoContra" prefWidth="74.0" text="SaldoContra" />
+            <TableColumn fx:id="colCodAdmin" prefWidth="71.0" text="Cod.Admin" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

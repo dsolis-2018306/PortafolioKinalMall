@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracionn" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="327610ed-a902-4d95-b6b0-340f0a588d18">
+	<property name="ireport.zoom" value="0.9090909090909268"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="508"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion;]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<rectangle>
+				<reportElement x="5" y="0" width="797" height="555" backcolor="#3399FF" uuid="e4cf8bdf-ca30-4ad8-b43a-ab37ac16210b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="483" width="802" height="22" uuid="87dd3a82-0f89-4356-8178-5caebc63358f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" size="14"/>
+				</textElement>
+				<text><![CDATA[Diego Fernando Solís López]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="505" width="802" height="20" uuid="d0ab0fb7-47aa-4623-bc79-fd77c0104b1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[2018306]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="525" width="802" height="30" uuid="8a9e19fa-a8d9-45f2-883d-36ef403ee539"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[IN5AM]]></text>
+			</staticText>
+			<image>
+				<reportElement x="720" y="0" width="82" height="81" uuid="4bdadbaa-0448-46d5-a87e-41d5d8058349"/>
+				<imageExpression><![CDATA["C:\\Users\\Familia\\Documents\\NetBeansProjects\\KinalMall2018306\\src\\org\\diegosolis\\images\\kinallogo.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="331" y="404" width="150" height="151" uuid="c6263e6f-da74-4abb-a8ba-8d1174c575e4"/>
+				<imageExpression><![CDATA["C:\\Users\\Familia\\Documents\\NetBeansProjects\\KinalMall2018306\\src\\org\\diegosolis\\images\\LogoKinalMall20_adobespark.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="94" splitType="Stretch">
+			<rectangle>
+				<reportElement x="5" y="61" width="797" height="33" backcolor="#0099CC" uuid="5c4adbe3-f1ed-4f09-ba11-b314c732b3ba"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="61" width="802" height="32" uuid="daac6f34-fb34-4843-929c-6a1433300561"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Elephant" size="24"/>
+				</textElement>
+				<text><![CDATA[Administración]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<rectangle>
+				<reportElement x="206" y="1" width="394" height="61" backcolor="#0099CC" uuid="7b2a868f-9905-4888-af67-557261875734"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="600" y="1" width="202" height="61" backcolor="#0099CC" uuid="ead8171b-5bd8-4884-8e49-45d7585c4f26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Opaque" x="5" y="1" width="201" height="61" backcolor="#0099CC" uuid="e5dbca53-8379-43c5-a711-8e9661c803ab"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="206" height="59" uuid="a7890feb-4f5b-4aff-bacf-987138202df4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="3" width="394" height="59" uuid="be913555-0250-47cf-879d-ed615781ece6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="3" width="202" height="59" uuid="8758412d-a73a-4a42-8617-b9fdca935c6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Télefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="600" y="0" width="202" height="32" uuid="cee73f86-689d-4b18-afe3-c6d3756c5705"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="206" y="0" width="394" height="32" uuid="15914208-9a1a-44af-a07d-a0055f3b65c5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="5" y="0" width="201" height="32" uuid="dac2cae2-4802-4a1a-a4d3-797755e2f8fc"/>
+			</rectangle>
+			<textField>
+				<reportElement x="5" y="0" width="206" height="32" uuid="1076621d-84a8-4240-b6b3-9789673737ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="394" height="32" uuid="a9ef0c5b-1d71-4aae-862c-179717b64ac9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="202" height="32" uuid="6ef8aa38-b2ee-4655-8121-e6f5dc2ec4fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="86" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
